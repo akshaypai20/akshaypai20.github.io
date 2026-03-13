@@ -1,14 +1,172 @@
 
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Akshay Pai</title>
   <style>
-    body { font-family: Arial, sans-serif; margin: 40px; }
+    :root {
+      --text: #222;
+      --muted: #555;
+      --rule: #ddd;
+      --link: #0b66c3;
+    }
+
+    body {
+      font-family: system-ui, Arial, sans-serif;
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 40px 20px;
+      line-height: 1.6;
+      color: var(--text);
+    }
+
+    h1, h2 { margin-bottom: 8px; }
+    h1 { font-size: 2.3rem; }
+    h2 {
+      margin-top: 32px;
+      border-bottom: 1px solid var(--rule);
+      padding-bottom: 4px;
+    }
+
+    .contact a { color: var(--link); text-decoration: none; }
+    .muted { color: var(--muted); }
+    ul { padding-left: 20px; }
+
+    /* Header layout */
+    .header {
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 16px;
+      align-items: center;
+      margin-bottom: 12px;
+    }
+
+    .avatar {
+      width: 108px;
+      height: 108px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 1px solid var(--rule);
+    }
+
+    @media (max-width: 520px) {
+      .header {
+        grid-template-columns: 1fr;
+        justify-items: start;
+      }
+    }
+    
+    .chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 12px;
+    }
+    
+    .chip {
+      padding: 6px 12px;
+      border-radius: 20px;
+      background: #f2f2f2;
+      border: 1px solid #ddd;
+      font-size: 0.9rem;
+
   </style>
 </head>
+
 <body>
-  <h1>Hello, I'm Akshay!</h1>
-  <p>Welcome to my personal site on GitHub Pages.</p>
+
+  <!-- NAME + PHOTO -->
+  <div class="header">
+    <img class="avatar" src="assets/propic.jpeg" alt="Photo of Akshay Palimar Pai" />
+    <div>
+      <h1>Akshay Palimar Pai</h1>
+      <p class="muted">Machine Learning Engineer</p>
+    </div>
+  </div>
+
+  <!-- CONTACT -->
+  <p class="contact">
+    📧 <a href="mailto:pai20akshay@gmail.com">Personal Email</a> ·
+    🌐 <a href="https://github.com/akshaypai20" target="_blank" rel="noopener">GitHub</a> ·
+    💼 <a href="https://www.dfki.de/web/ueber-uns/mitarbeiter/person/akpa02" target="_blank" rel="noopener">DFKI</a> ·
+    🔬 <a href="https://www.researchgate.net/profile/Akshay-Palimar-Pai" target="_blank" rel="me noopener">ResearchGate</a>
+  </p>
+
+  <!-- DESCRIPTION -->
+  <p>
+    Machine Learning Engineer specializing in remote sensing, geospatial data
+    processing, and applied AI. Experienced in building automated Earth
+    Observation pipelines, ML model lifecycle tools, and scalable data workflows.
+    Strong background in Python, EO APIs, deep learning, and time-series analysis
+    for environmental and agricultural applications.
+  </p>
+
+  <!-- PUBLICATIONS -->
+  <h2>Publications</h2>
+  <ul>
+    <li>
+      <strong>Toward an Interactive Reading Experience: Deep Learning Insights and Visual Narratives of Engagement and Emotion</strong>,
+      IEEE Access, 2024<br />
+      DOI: 10.1109/ACCESS.2024.3350745
+    </li>
+    <li>
+      <strong>Real-Time Feedback on Reader's Engagement and Emotion Estimated by Eye Tracking and Physiological Sensing</strong>,
+      UbiComp/ISWC Adjunct, 2022<br />
+      DOI: 10.1145/3544793.3560329
+    </li>
+  </ul>
+
+  <!-- PROJECTS -->
+  <h2>Projects</h2>
+  <ul>
+    <li><strong>Solution-Factory Library</strong> — Automation framework to acquire and process remote-sensing data from Copernicus, NASA, and ECMWF for ML workflows; includes model querying and modular satellite-data processing tools.</li>
+    <li><strong>Phenkit-learn ML Pipeline</strong> — Automated training, evaluation, and reporting workflows for phenology models at BASF/Xarvio.</li>
+    <li><strong>Emotion Prediction System</strong> — Web app using Next.js + Tobii Eye Tracker + Empatica sensors to predict reader engagement via deep learning.</li>
+    <li><strong>Transformer-based Crop Phenology Prediction</strong> — Master’s thesis comparing Transformer models vs. XGBoost with AWS SageMaker, MLflow, Optuna.</li>
+    <li><strong>FarmBot Automation Platform</strong> — Backend development (Node.js, Express, MongoDB) for automated plant cultivation.</li>
+    <li><strong>German Traffic Sign Classification</strong> — B.Tech thesis implementing and fine-tuning CNN models using TensorFlow, deployed with Flask.</li>
+  </ul>
+
+  <!-- EXPERIENCE -->
+  <h2>Experience</h2>
+  <ul>
+    <li>
+      <strong>Machine Learning Engineer — DFKI</strong> (11/2023 – Present)<br />
+      Remote sensing automation, EO pipelines, model operationalization (LSTM, Conv-LSTM), and geospatial ML tooling.
+    </li>
+    <li>
+      <strong>Data Science Intern + Working Student — Xarvio / BASF</strong> (09/2022 – 10/2023)<br />
+      Developed Phenkit-learn; automated ML pipeline for phenology models; AWS data ingestion; documentation & debugging.
+    </li>
+    <li>
+      <strong>Research Assistant — Psybernetics Lab (IQL, DFKI)</strong> (04/2022 – 08/2022)<br />
+      Sensor-driven emotion prediction models, Next.js data-collection platform, Dash-based real-time feedback system.
+    </li>
+  </ul>
+
+  <!-- EDUCATION -->
+  <h2>Education</h2>
+  <ul>
+    <li>
+      <strong>M.Sc. Computer Science</strong>, RPTU Kaiserslautern, Germany (2021–2023)<br />
+      Courses: Deep Learning, Data Science, Software Engineering, Digital Farming.
+    </li>
+    <li>
+      <strong>B.Tech Computer Science</strong>, MSRUAS Bengaluru, India (2016–2020)<br />
+      Courses: DSA, DBMS, OS, Data Mining, Data Analytics, Computational Intelligence.
+    </li>
+  </ul>
+
+  <!-- HOBBIES -->
+  <h2>Hobbies</h2>
+  <div class="chips">
+    <span class="chip">Pair Dancing</span>
+    <span class="chip">Sparring</span>
+    <span class="chip">Calisthenics</span>
+    <span class="chip">Longsword Fencing</span>
+  </div>
+
 </body>
 </html>
