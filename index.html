@@ -71,6 +71,26 @@
       background: #f2f2f2;
       border: 1px solid #ddd;
       font-size: 0.9rem;
+      
+    /* Grouped layout */
+    .stack {
+      display: grid;
+      gap: 18px;                /* space between groups */
+      margin-top: 12px;
+    }
+    
+    .stack-group {
+      display: grid;
+      gap: 8px;                 /* space between heading and chips */
+    }
+    
+    .stack-title {
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: var(--muted, #555);
+      letter-spacing: .2px;
+    }
+
 
   </style>
 </head>
@@ -159,63 +179,94 @@
     </li>
   </ul>
   
-  <!-- TECH STACK -->
+
+  !-- TECH STACK (Grouped) -->
   <h2>Tech Stack</h2>
-  <div class="chips">
   
-    <!-- Programming & ML -->
-    <span class="chip">Python</span>
-    <span class="chip">PyTorch</span>
-    <span class="chip">Keras</span>
-    <span class="chip">scikit‑learn</span>
-    <span class="chip">XGBoost</span>
-    <span class="chip">Optuna</span>
-    <span class="chip">MLflow</span>
+  <div class="stack">
   
-    <!-- Geospatial & EO -->
-    <span class="chip">Rasterio</span>
-    <span class="chip">GeoPandas</span>
-    <span class="chip">xarray</span>
-    <span class="chip">eodag</span>
-    <span class="chip">eoreader</span>
-    <span class="chip">earthaccess</span>
-    <span class="chip">cdsapi</span>
+    <div class="stack-group">
+      <div class="stack-title">ML & AI</div>
+      <div class="chips">
+        <span class="chip">Python</span>
+        <span class="chip">PyTorch</span>
+        <span class="chip">Keras</span>
+        <span class="chip">scikit‑learn</span>
+        <span class="chip">XGBoost</span>
+        <span class="chip">Optuna</span>
+        <span class="chip">MLflow</span>
+      </div>
+    </div>
   
-    <!-- Data & Visualization -->
-    <span class="chip">pandas</span>
-    <span class="chip">seaborn</span>
-    <span class="chip">matplotlib</span>
-    <span class="chip">plotly</span>
-    <span class="chip">scipy</span>
+    <div class="stack-group">
+      <div class="stack-title">Geospatial & Earth Observation</div>
+      <div class="chips">
+        <span class="chip">Rasterio</span>
+        <span class="chip">GeoPandas</span>
+        <span class="chip">xarray</span>
+        <span class="chip">eodag</span>
+        <span class="chip">eoreader</span>
+        <span class="chip">earthaccess</span>
+        <span class="chip">cdsapi</span>
+      </div>
+    </div>
   
-    <!-- Cloud & DevOps -->
-    <span class="chip">AWS</span>
-    <span class="chip">SageMaker</span>
-    <span class="chip">TeamCity CI/CD</span>
-    <span class="chip">Docker</span>
-    <span class="chip">Podman</span>
-    <span class="chip">Ansible</span>
+    <div class="stack-group">
+      <div class="stack-title">Data & Visualization</div>
+      <div class="chips">
+        <span class="chip">pandas</span>
+        <span class="chip">seaborn</span>
+        <span class="chip">matplotlib</span>
+        <span class="chip">plotly</span>
+        <span class="chip">scipy</span>
+      </div>
+    </div>
   
-    <!-- Backend & Web -->
-    <span class="chip">Flask</span>
-    <span class="chip">FastAPI</span>
-    <span class="chip">Streamlit</span>
-    <span class="chip">Dash</span>
-    <span class="chip">Next.js</span>
-    <span class="chip">Node.js</span>
-    <span class="chip">Express.js</span>
+    <div class="stack-group">
+      <div class="stack-title">Cloud & DevOps</div>
+      <div class="chips">
+        <span class="chip">AWS</span>
+        <span class="chip">SageMaker</span>
+        <span class="chip">TeamCity CI/CD</span>
+        <span class="chip">Docker</span>
+        <span class="chip">Podman</span>
+        <span class="chip">Ansible</span>
+      </div>
+    </div>
   
-    <!-- Databases -->
-    <span class="chip">MySQL</span>
-    <span class="chip">SQLite</span>
-    <span class="chip">MongoDB</span>
+    <div class="stack-group">
+      <div class="stack-title">Backend & Web</div>
+      <div class="chips">
+        <span class="chip">Flask</span>
+        <span class="chip">FastAPI</span>
+        <span class="chip">Streamlit</span>
+        <span class="chip">Dash</span>
+        <span class="chip">Next.js</span>
+        <span class="chip">Node.js</span>
+        <span class="chip">Express.js</span>
+      </div>
+    </div>
   
-    <!-- Systems & Tools -->
-    <span class="chip">Linux</span>
-    <span class="chip">WSL</span>
-    <span class="chip">Git</span>
+    <div class="stack-group">
+      <div class="stack-title">Databases</div>
+      <div class="chips">
+        <span class="chip">MySQL</span>
+        <span class="chip">SQLite</span>
+        <span class="chip">MongoDB</span>
+      </div>
+    </div>
+  
+    <div class="stack-group">
+      <div class="stack-title">Systems & Tools</div>
+      <div class="chips">
+        <span class="chip">Linux</span>
+        <span class="chip">WSL</span>
+        <span class="chip">Git</span>
+      </div>
+    </div>
   
   </div>
+
 
 
   <!-- HOBBIES -->
