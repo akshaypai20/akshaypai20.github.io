@@ -30,6 +30,10 @@ a{color:var(--fg);text-decoration:none}
 .contact-form{display:flex;flex-direction:column;gap:12px}
 .contact-form input,.contact-form textarea{width:100%;padding:10px;border-radius:6px;border:1px solid #334; background:#0a1130;color:var(--fg)}
 .site-footer{padding:20px 0;text-align:center;color:var(--muted);border-top:1px solid rgba(255,255,255,.08);margin-top:40px}
+.contact a { color: var(--link); text-decoration: none; }
+.muted { color: var(--muted); }
+ul { padding-left: 20px; }
+
 @media (max-width: 700px){
   .site-header{position:static}
   .hero{padding:40px 0}
