@@ -31,9 +31,12 @@ a{color:var(--fg);text-decoration:none}
 .contact-form input,.contact-form textarea{width:100%;padding:10px;border-radius:6px;border:1px solid #334; background:#0a1130;color:var(--fg)}
 .site-footer{padding:20px 0;text-align:center;color:var(--muted);border-top:1px solid rgba(255,255,255,.08);margin-top:40px}
 .contact a { color: var(--link); text-decoration: none; } .muted { color: var(--muted); } ul { padding-left: 20px; }
-.avatar{width:18px; height:18px;border-radius:50%;object-fit: cover;border: 1px solid var(--rule);}
-
-@media (max-width: 70px){
-  .site-header{position:static}
-  .hero{padding:4px 0}
+.avatar {width: 110px;height: 110px;border-radius: 50%;object-fit: cover;border: 2px solid rgba(255,255,255,0.4);box-shadow: 0 4px 14px rgba(0,0,0,0.15);margin-bottom: 14px;
 }
+@media (max-width: 600px) {
+  .avatar {
+    width: 85px;
+    height: 85px;
+  }
+}
+
