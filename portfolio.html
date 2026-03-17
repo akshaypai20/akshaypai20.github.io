@@ -1,0 +1,179 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Akshay Palimar Pai | Portfolio</title>
+  <meta name="description" content="Portfolio of Akshay Palimar Pai - ML Engineer, R&D, Publications" />
+  <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <h1 class="brand">Akshay Palimar Pai</h1>
+      <nav aria-label="Main Navigation" class="nav">
+        <a href="#about">About</a>
+        <a href="#experience">Experience</a>
+        <a href="#publications">Publications</a>
+        <a href="#education">Education</a>
+        <a href="#techstack">Tech Stack</a>
+        <a href="#hobbies">Hobbies</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <section id="hero" class="hero">
+    <div class="container">
+      <img class="avatar" src="assets/propic.jpeg" alt="Photo of Akshay Palimar Pai" />
+      <h2>Hello, I’m Akshay Palimar Pai</h2>
+      <p>Machine Learning Engineer | Remote Sensing | Data Science</p>
+       <p class="contact">
+        🌐 <a href="https://github.com/akshaypai20" target="_blank" rel="noopener">GitHub</a> ·
+        💼 <a href="https://www.dfki.de/web/ueber-uns/mitarbeiter/person/akpa02" target="_blank" rel="noopener">DFKI</a> ·
+        🔬 <a href="https://www.researchgate.net/profile/Akshay-Palimar-Pai" target="_blank" rel="me noopener">ResearchGate</a>
+      </p>
+    </div>
+
+   
+  </section>
+
+  <section id="about" class="section about">
+    <div class="container">
+      <h2>About</h2>
+      <p>Machine Learning Engineer specializing in remote sensing, geospatial data
+      processing, and applied AI. Experienced in building automated Earth
+      Observation pipelines, ML model lifecycle tools, and scalable data workflows.
+      Strong background in Python, EO APIs, deep learning, and time-series analysis
+      for environmental and agricultural applications.</p>
+    </div>
+  </section>
+
+  <section id="experience" class="section experience">
+    <div class="container">
+      <h2>Experience</h2>
+
+      <div class="exp-item">
+        <h3>11/2023 - Present | Machine Learning Engineer</h3>
+        <p>German Research Center for Artificial Intelligence (DFKI), Kaiserslautern, Germany</p>
+        <ul>
+          <li>Developed ‘solution-factory’ — a Python library to automate acquisition of remote-sensing data and querying ML models.</li>
+          <li>Engineered automated data pipeline to download, process, and deliver satellite data from Copernicus, NASA, ECMWF (via eodag, eoreader, earthaccess, cdsapi).</li>
+          <li>Tested and operationalized LSTM for crop classification and Conv-LSTM for wildfire risk prediction.</li>
+          <li>Created modular satellite data processing modules (cropping, merging, patching) using xarray, rasterio, GeoPandas, Shapely.</li>
+          <li>Developed image/result visualization modules with ipywidgets; automated unit tests with pytest; Linux/WSL testing.</li>
+        </ul>
+      </div>
+
+      <div class="exp-item">
+        <h3>09/2022 – 10/2023 | Data Science Intern + Working Student</h3>
+        <p>Xarvio – BASF Digital Farming Solutions, Cologne, Germany</p>
+        <ul>
+          <li>Contributed to Phenkit-learn: a Python library automating Phenology Model lifecycle with weather data.</li>
+          <li>Improved ML pipelines for training, evaluation, reporting, and testing of Phenology models (scikit-learn, SciPy, xgboost, matplotlib, seaborn).</li>
+          <li>Data pipeline to fetch data from AWS S3 using pyarrow; standardized modules for data cleaning and feature calculation.</li>
+          <li>Documentation via Sphinx; supported agronomic modellers in debugging data-driven decisions.</li>
+        </ul>
+      </div>
+
+      <div class="exp-item">
+        <h3>04/2022 – 08/2022 | Research Assistant</h3>
+        <p>Psybernetics Lab ‑ (IQL ‑ DFKI)</p>
+        <ul>
+          <li>Built a Next.js web app to collect user data from reading experiments using Tobii 4C and Empatica sensors.</li>
+          <li>Processed sensor data in Python; trained DL models to predict emotion/engagement; real-time feedback with Dash.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="publications" class="section publications">
+    <div class="container">
+      <h2>Publications</h2>
+      <div class="pub-card">
+        <p><strong>Toward an Interactive Reading Experience: Deep Learning Insights and Visual Narratives of Engagement and Emotion.</strong></p>
+        <p>IEEE Access, 2024.</p>
+        <p>Link: <a href="https://doi.org/10.1109/ACCESS.2024.3350745" target="_blank" rel="noopener">doi.org/10.1109/ACCESS.2024.3350745</a></p>
+      </div>
+      <div class="pub-card">
+        <p><strong>Real-Time Feedback on Reader's Engagement and Emotion Estimated by Eye-Tracking and Physiological Sensing.</strong></p>
+        <p>UbiComp/ISWC Adjunct 2022.</p>
+        <p>Link: <a href="https://doi.org/10.1145/3544793.3560329" target="_blank" rel="noopener">doi.org/10.1145/3544793.3560329</a></p>
+      </div>
+    </div>
+  </section>
+
+  <section id="education" class="section education">
+    <div class="container">
+      <h2>Education</h2>
+      <div class="edu-item">
+        <h3>M. Sc. Computer Science</h3>
+        <p>RPTU Kaiserslautern, Germany (04/2021 – 10/2023)</p>
+        <ul>
+          <li>Courses: Machine learning, Collaborative Intelligence, Very Deep Learning, Data Visualization, Foundations of Software Engineering, Digital Farming.</li>
+          <li>Master Thesis: Transformer-based crop phenology model; AWS SageMaker, MLflow, Optuna, PyTorch.</li>
+        </ul>
+      </div>
+
+      <div class="edu-item">
+        <h3>B. Tech. Computer Science</h3>
+        <p>M. S. Ramaiah University of Applied Sciences, Bengaluru, India (08/2016 – 08/2020)</p>
+        <ul>
+          <li>Courses: Engineering Math, Data Structures, DBMS, Web Development, Data Mining, Analytics.</li>
+          <li>Bachelor Thesis: Neural networks for German Traffic Sign classification; Flask web app; Heroku deployment.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="techstack" class="section techstack">
+    <div class="container">
+      <h2>Tech Stack</h2>
+      <div class="grid">
+        <div class="card"><h3>Programming</h3><p>Python, C, C++, Java</p></div>
+        <div class="card"><h3>ML & DL</h3><p>scikit-learn, PyTorch, torchgeo, Optuna, MLflow</p></div>
+        <div class="card"><h3>Data & Visualization</h3><p>Pandas, xarray, seaborn, matplotlib, plotly</p></div>
+        <div class="card"><h3>Geospatial</h3><p>Rasterio, GeoPandas, Shapely, nasaearthdata, cdsapi</p></div>
+        <div class="card"><h3>Web & Apps</h3><p>Next.js, Dash, Flask, FastAPI, Streamlit</p></div>
+        <div class="card"><h3>Cloud & DevOps</h3><p>AWS, CI/CD, TeamCity</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="hobbies" class="section hobbies">
+    <div class="container">
+      <h2>Hobbies</h2>
+      <div class="grid">
+        <div class="card"><h3>Sparring</h3><p>Boxing, Longsword Fencing</p></div>
+        <div class="card"><h3>Dancing</h3><p>Discofox, West Coast Swing, Zouk</p></div>
+        <div class="card"><h3>Calisthenics</h3><p>Front Lever, Dragon Squat</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="section contact">
+    <div class="container">
+      <h2>Contact</h2>
+      <p>Interested in collaborating? Reach out!</p>
+      <form action="https://formspree.io//f/meerrazv" method="POST" class="contact-form">
+        <label>Your Email
+          <input type="email" name="email" required />
+        </label>
+        <label>Message
+          <textarea name="message" rows="5" required></textarea>
+        </label>
+        <button type="submit" class="btn">Send</button>
+      </form>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© Akshay Palimar Pai, <span id="year"></span></p>
+    </div>
+  </footer>
+
+  <script src="assets/js/scripts.js"></script>
+</body>
+</html>
