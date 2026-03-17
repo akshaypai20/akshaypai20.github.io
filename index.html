@@ -69,6 +69,20 @@
   </style>
 </head>
 
+<body>
+
+  <div class="gate-box">
+    <h2>Enter to View Portfolio</h2>
+    <p>Please provide your name and email to continue.</p>
+
+    <form id="gateForm" class="contact-form">
+      <input type="email" name="email" placeholder="Your email" required />
+      <input type="text" name="message" placeholder="Your name" required />
+      <button type="submit">Continue</button>
+    </form>
+
+  </div>
+
 <script>
 document.getElementById("gateForm").addEventListener("submit", async (e) => {
   e.preventDefault();
@@ -93,20 +107,5 @@ document.getElementById("gateForm").addEventListener("submit", async (e) => {
   }
 });
 </script>
-
-<body>
-
-  <div class="gate-box">
-    <h2>Enter to View Portfolio</h2>
-    <p>Please provide your name and email to continue.</p>
-
-    <form id="gateForm" class="contact-form">
-      <input type="email" name="email" placeholder="Your email" required />
-      <input type="text" name="message" placeholder="Your name" required />
-      <button type="submit">Continue</button>
-    </form>
-
-  </div>
-
 </body>
 </html>
