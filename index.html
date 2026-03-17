@@ -76,13 +76,6 @@
 <!-- WORKING FORM SUBMISSION SCRIPT -->
 <script>
 
-async function isKickboxDisposable(email) {
-  const domain = email.split("@")[1];
-  const res = await fetch(`https://open.kickbox.com/v1/disposable/${domain}`);
-  const json = await res.json();
-  return json.disposable === true;
-}
-
 async function validateEmailAdvanced(email) {
 
   const apiKey = "2583d1d7790f7f8410ec1b6923cecd5d";
@@ -124,10 +117,6 @@ document.getElementById("gateForm").addEventListener("submit", async (e) => {
   const result = await validateEmailAdvanced(email);
   if (!result.valid) {
     status.textContent = result.reason;
-    return;
-  }
-  if (await isKickboxDisposable(email)) {
-    status.textContent = "Temporary email providers are not allowed.";
     return;
   }
   // ---- SEND TO FORMSPREE ----
