@@ -75,14 +75,58 @@
 
 <!-- WORKING FORM SUBMISSION SCRIPT -->
 <script>
+
+async function validateEmailAdvanced(email) {
+
+  const apiKey = "2583d1d7790f7f8410ec1b6923cecd5d";
+  const url = `https://apilayer.net/api/check?access_key=${apiKey}&email=${encodeURIComponent(email)}&smtp=1&format=1`;
+
+  try {
+    const res = await fetch(url);
+    const data = await res.json();
+    // If API returned error
+    if (data.error) { return { valid: false, reason: "Email verification service error." };  }
+    // 1. Syntax check
+    if (!data.format_valid) {return { valid: false, reason: "Email format is invalid." };}
+    // 2. MX record check
+    if (!data.mx_found) {      return { valid: false, reason: "Email domain has no MX records." }; }
+    // 3. Disposable email provider?
+    if (data.disposable) {return { valid: false, reason: "Disposable email addresses are not allowed." };
+    }
+    // SMTP check (deliverability)
+    if (data.smtp_check === false) {return { valid: false, reason: "Email address cannot receive mail (SMTP check failed)." };}
+
+    return { valid: true };
+
+  } catch (err) {
+    return { valid: false, reason: "Network or API error." };
+  }
+}
+
 document.getElementById("gateForm").addEventListener("submit", async (e) => {
   e.preventDefault();
 
   const status = document.getElementById("status");
-  status.textContent = "Sending...";
+  status.textContent = "Validating email...";
 
   const data = new FormData(e.target);
+  const email = data.get("email");
 
+  // --- ADVANCED EMAIL VALIDATION ---
+  const result = await validateEmailAdvanced(email);
+
+  if (!result.valid) {
+    status.textContent = result.reason;
+    return;
+  }
+
+  // Save for personalization
+  localStorage.setItem("visitorName", data.get("name"));
+  localStorage.setItem("visitorEmail", email);
+
+  status.textContent = "Sending...";
+
+  // ---- SEND TO FORMSPREE ----
   try {
     const res = await fetch("https://formspree.io/f/meerrazv", {
       method: "POST",
@@ -92,17 +136,15 @@ document.getElementById("gateForm").addEventListener("submit", async (e) => {
 
     if (res.ok) {
       status.textContent = "Success! Redirecting...";
-      // Redirect after 800ms for smooth UX
-      setTimeout(() => {
-        window.location.href = "https://akshaypai20.github.io/portfolio.html";
-      }, 800);
+      setTimeout(() => window.location.href = "https://akshaypai20.github.io/portfolio.html", 800);
     } else {
-      status.textContent = "Error sending message.";
+      status.textContent = "Form submission error.";
     }
-  } catch(err) {
+  } catch (err) {
     status.textContent = "Network error. Try again.";
   }
 });
+
 </script>
 
 </body>
