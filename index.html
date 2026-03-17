@@ -119,17 +119,17 @@ document.getElementById("gateForm").addEventListener("submit", async (e) => {
   const data = new FormData(e.target);
   const email = data.get("email");
  
-  if (await isKickboxDisposable(email)) {
-    status.textContent = "Temporary email providers are not allowed.";
-    return;
-  }
+
   // --- ADVANCED EMAIL VALIDATION ---
   const result = await validateEmailAdvanced(email);
   if (!result.valid) {
     status.textContent = result.reason;
     return;
   }
-
+  if (await isKickboxDisposable(email)) {
+    status.textContent = "Temporary email providers are not allowed.";
+    return;
+  }
   // ---- SEND TO FORMSPREE ----
   try {
     const res = await fetch("https://formspree.io/f/meerrazv", {
